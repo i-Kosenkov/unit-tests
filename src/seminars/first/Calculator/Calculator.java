@@ -27,10 +27,6 @@ public class Calculator {
         return result;
     }
 
-    public static double calculateDiscount(double sum_order, double discount_pr) {
-        return sum_order - (discount_pr / 100 * sum_order);
-    }
-
     // HW1.1: Придумайте и опишите (можно в псевдокоде) функцию извлечения корня и
     // необходимые проверки для него используя граничные случаи
     public static double squareRootExtraction(double num) {
@@ -49,6 +45,6 @@ public class Calculator {
     public static double calculatingDiscount(double purchaseAmount, int discountAmount) {
         // purchaseAmount - сумма покупки
         // discountAmount - размер скидки
-        return 0; // Метод должен возвращать сумму покупки со скидкой
+        return purchaseAmount - (purchaseAmount * discountAmount / 100); // Метод должен возвращать сумму покупки со скидкой
     }
 }

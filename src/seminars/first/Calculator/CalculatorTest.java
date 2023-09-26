@@ -34,16 +34,16 @@ public class CalculatorTest {
         // }
 
         // Проверка базового функционала с целыми числами, с использованием утверждений:
-        assert 8 == Calculator.calculation(2, 6, '+');
-        assert 0 == Calculator.calculation(2, 2, '-');
-        assert 14 == Calculator.calculation(2, 7, '*');
-        assert 2 == Calculator.calculation(100, 50, '/');
+//        assert 8 == Calculator.calculation(2, 6, '+');
+//        assert 0 == Calculator.calculation(2, 2, '-');
+//        assert 14 == Calculator.calculation(2, 7, '*');
+//        assert 2 == Calculator.calculation(100, 50, '/');
 
         // Проверка базового функционала с целыми числами, с использованием утверждений AssertJ:
-//        assertThat(Calculator.calculation(2, 6, '+')).isEqualTo(8);
-//        assertThat(Calculator.calculation(2, 2, '-')).isEqualTo(0);
-//        assertThat(Calculator.calculation(2, 7, '*')).isEqualTo(14);
-//        assertThat(Calculator.calculation(100, 50, '/')).isEqualTo(2);
+        assertThat(Calculator.calculation(2, 6, '+')).isEqualTo(8);
+        assertThat(Calculator.calculation(2, 2, '-')).isEqualTo(0);
+        assertThat(Calculator.calculation(2, 7, '*')).isEqualTo(14);
+        assertThat(Calculator.calculation(100, 50, '/')).isEqualTo(2);
 
         // Проверка ожидаемого исключения, с использованием утверждений AssertJ:
 //        assertThatThrownBy(() ->
@@ -73,5 +73,9 @@ public class CalculatorTest {
         // }
         //   assert 0 == seminars.first.Calculator.Calculator.calculation(2, 6, '+');
         //    assertThat(seminars.first.Calculator.Calculator.calculation(2, 6, '+')).isEqualTo(0);
+
+        assertThatThrownBy(() ->
+                Calculator.calculatingDiscount(150, 10)
+        ).isInstanceOf(ArithmeticException.class);
     }
 }

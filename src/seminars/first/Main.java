@@ -1,5 +1,7 @@
 package seminars.first;
 
+import seminars.first.Calculator.Calculator;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -42,6 +44,8 @@ public class Main {
         //  testingJavaCollectionsAssertJ(colors);
 
         //  checkingHero();
+
+        checkingDiscount();
     }
 
     //                  Практические задания:
@@ -201,5 +205,9 @@ public class Main {
         public void setHuman(boolean human) {
             isHuman = human;
         }
+    }
+
+    public static void checkingDiscount(){
+        System.out.println(Calculator.calculatingDiscount(150, 50));
     }
 }
