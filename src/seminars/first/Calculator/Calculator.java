@@ -27,6 +27,10 @@ public class Calculator {
         return result;
     }
 
+    public static double calculateDiscount(double sum_order, double discount_pr) {
+        return sum_order - (discount_pr / 100 * sum_order);
+    }
+
     // HW1.1: Придумайте и опишите (можно в псевдокоде) функцию извлечения корня и
     // необходимые проверки для него используя граничные случаи
     public static double squareRootExtraction(double num) {
@@ -34,10 +38,10 @@ public class Calculator {
         //  Отрицательные числа
         //  Дробные значения корней
         //  Целые
-            if(num < 0) {
-                throw new IllegalArgumentException("Cannot calculate square root of a negative number");
-            }
-            return Math.sqrt(num);
+        if (num < 0) {
+            throw new IllegalArgumentException("Cannot calculate square root of a negative number");
+        }
+        return Math.sqrt(num);
     }
 
     // Нужно написать в калькуляторе метод вычисления суммы покупки со скидкой и проверить его, используя AssertJ
